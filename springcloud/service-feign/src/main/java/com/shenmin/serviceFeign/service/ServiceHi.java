@@ -1,0 +1,20 @@
+package com.shenmin.serviceFeign.service;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+/**
+ * 描述〈一个Feign服务消费者接口〉
+ *
+ * @author shen.min
+ * @create 2019/5/9 15:39
+ */
+@FeignClient(value = "service-hi2", fallback = ServiceHiHystrix.class)
+public interface ServiceHi {
+    /**
+     * <p>通过Feign伪Http客户端调用service-hi提供的服务</p>
+     **/
+    @GetMapping("/hi/{name}")
+    String sayHiFromServiceHi2(@PathVariable(value = "name") String name);
+}

@@ -1,0 +1,4 @@
+com\shenmin\serviceFeign\service\ServiceHi.class
+com\shenmin\serviceFeign\controller\HelloController.class
+com\shenmin\serviceFeign\service\ServiceHiHystrix.class
+com\shenmin\serviceFeign\ServiceFeignApplication.class
