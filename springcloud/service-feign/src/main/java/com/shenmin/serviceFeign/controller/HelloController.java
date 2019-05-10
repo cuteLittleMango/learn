@@ -2,7 +2,6 @@ package com.shenmin.serviceFeign.controller;
 
 import com.shenmin.serviceFeign.service.ServiceHi;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,6 +26,6 @@ public class HelloController {
     @GetMapping("/hello/{name}")
     public String sayHi(@PathVariable String name){
         //调用Feign客户端ScheduleServiceHi的接口
-        return serviceHi.sayHiFromServiceHi2(name);
+        return serviceHi.sayHiFromServiceHi(name);
     }
 }

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class ServiceHiHystrix implements  ServiceHi {
 
     @Override
-    public String sayHiFromServiceHi2(String name) {
+    public String sayHiFromServiceHi(String name) {
         return "hello" + name +", this message send failed";
     }
 }
